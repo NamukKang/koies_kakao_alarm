@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <table style="width:800px; margin:0 auto; border-collapse:collapse;">
+        <tr>
+            <td style="background-color:white; border:1px solid gainsboro; padding:60px;">
+                <img src="https://drive.google.com/uc?export=view&id=1wxrJ4f42z7HFq9iSS_K22Cw2S_jGIzJ8" style="margin:30px 0; height:30px">
+                <h2 style="font-size:25px; font-weight:normal; text-align:center; margin:20px 0;">
+                     이사장 지시사항 주간 알림  
+                </h2>
+              
+                <p style="font-size:20px; font-weight:normal; text-align:center; color:darkslategray;">
+                  <b>이름</b> <b>본부장</b>님,<br>
+                    <p style = "font-size:20px; margin-top: 5px; text-align:center; color:darkslategray; "><b><?!= content.today ?></b>까지의 지시사항 관리현황을 보내드립니다.
+                </p>
+                <table style="font-size:15px; margin:20px 0; width : 100%; border-top : 1px solid #444444; border-collapse : collapse;">
+                    <thead>
+                    <tr style = "text-align: center; background-color: #f0f0f0; border-bottom : 1px solid #444444;">
+                     <th style = "padding : 10px; ">본부</th>
+                     <th style = "padding : 10px; ">부서</th>
+                     <th style = "padding : 10px; ">진행<sup>1</sup>
+                     <th style = "padding : 10px; ">초과<sup>2</sup></th>
+                     <th style = "padding : 10px; ">종료<sup>3</sup></th>
+                    </tr>
+                  </thead>
+                 <tbody>
+                    <tr style="border-bottom : 1px solid #444444; padding : 10px; text-align : center;">
+                        <td colspan="2" style="padding : 10px;">공통사항</td>
+                        <td ><?!= content.common_progress ?></td>
+                        <td ><?!= content.common_over ?></td>
+                        <td ><?!= content.common_predict ?></td>
+                    </tr>
+                    <tr style="border-bottom : 1px solid #444444;  padding : 10px; text-align : center;">
+                        <td rowspan="5" style = "padding : 10px;">경영관리본부</td>
+                        <td style="padding : 10px;" >기획조정실</td>
+                        <td><?!= content.control_progress ?></td>
+                        <td><?!= content.control_over ?></td>
+                        <td><?!= content.control_predict ?></td>
+                    </tr>
+                    <tr style="border-bottom : 1px solid #444444;  padding : 10px; text-align : center;">
+                        <td style="padding : 10px;">운영지원처</td>
+                        <td><?!= content.support_progress ?></td>
+                        <td><?!= content.support_over ?></td>
+                        <td><?!= content.support_predict ?></td>
+                    </tr>
+                    <tr style="border-bottom : 1px solid #444444; text-align : center;">
+                        <td style= "padding : 10px;">안전문화처</td>
+                        <td><?!= content.culture_progress ?></td>
+                        <td><?!= content.culture_over ?></td>
+                        <td><?!= content.culture_predict ?></td>
+                    </tr>
+                    <tr style="border-bottom : 1px solid #444444; text-align : center;">
+                        <td style="padding : 10px;">통합정보처</td>
+                        <td><?!= content.information_progress ?></td>
+                        <td><?!= content.information_over ?></td>
+                        <td><?!= content.information_predict ?></td>
+                    </tr>
+                    <tr style= "border-bottom : 1px solid #444444; text-align : center;">
+                      <td style="padding : 10px;" ><b>소계</td>
+                        <td><?!= content.manage_sum_progress ?></td>
+                        <td><?!= content.manage_sum_over ?></td>
+                        <td><?!= content.manage_sum_predict ?></td>
+                    </tr>
+                    <tr style= "border-bottom : 1px solid #444444; text-align : center;">
+                        <td colspan="2" style="padding : 10px;">감사실</td>
+                        <td><?!= content.audit_progress ?></td>
+                        <td><?!= content.audit_over ?></td>
+                        <td><?!= content.audit_predict ?></td>
+                    </tr>
+                    <tr style= "border-bottom : 1px solid #444444; text-align : center;">
+                        <td colspan="2" style="padding : 10px;">미래전략팀</td>
+                        <td><?!= content.future_progress ?></td>
+                        <td><?!= content.future_over ?></td>
+                        <td><?!= content.future_predict ?></td>
+                    </tr>
+                    <tr style= "border-bottom : 1px solid #444444; text-align : center;">
+                        <td colspan="2" style="padding : 10px;">경영지원팀</td>
+                        <td><?!= content.management_progress ?></td>
+                        <td><?!= content.management_over ?></td>
+                        <td><?!= content.management_predict ?></td>
+                    </tr>
+                    <tr style="font-weight:bold; border-bottom : 1px solid #444444; text-align : center;">
+                        <td colspan="2" style="padding : 10px;">합계</td>
+                        <td><?!= content.total_sum_progress ?></td>
+                        <td><?!= content.total_sum_over ?></td>
+                        <td><?!= content.total_sum_predict ?></td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="directive-notes">
+                  <tr>
+                  <td colspan="5" style = "font-size: 11px">
+                      <sup>1</sup> '진행'은 현재 진행 중인 건수를 나타냅니다.<br>
+                      <sup>2</sup> '초과'는 기한을 초과한 건수를 나타냅니다.<br>
+                      <sup>3</sup> '종료'는 다음주 종료 예정인 건수를 나타냅니다.
+                  </td>
+                  </tr>
+                  </tfoot>
+                </table>
+                <p style="margin-top: 50px; margin-bottom: 0px;text-align:center;font-size:20px">
+                    아래(👇)의 버튼으로 이동할 수 있습니다.<br><p style="font-size:13px; text-align:center;">*본 메일은 매주 자동으로 발송되는 알림이며, 문의사항은 경영지원팀으로 연락(📱) 바랍니다.</p>
+                </p>
+                <div style="font-size:22px; text-align:center; margin:30px 0;">
+                    <a href="<?!= content.fileURL ?>" target="_blank" 
+                        style="display:inline-block; padding:15px; background-color: #38aefb; color:white; text-decoration: none; transition: all 0.3s;" 
+                        onmouseover="this.style.backgroundColor='#0066cc'; this.style.fontWeight='bold'; this.style.textDecoration='underline';" 
+                        onmouseout="this.style.backgroundColor='#38aefb'; this.style.fontWeight='normal'; this.style.textDecoration='none';">
+                        지시사항 관리대장
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
